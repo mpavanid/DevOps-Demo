@@ -50,9 +50,9 @@
     </parent>
 
     <groupId>org.glassfish.jersey.core</groupId>
-    <artifactId>devops_01</artifactId>
-    <packaging>war</packaging>
-    <name>devops</name>
+    <artifactId>jersey-common</artifactId>
+    <packaging>jar</packaging>
+    <name>jersey-common</name>
 
     <description>Jersey core common packages</description>
 
