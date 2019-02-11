@@ -52,7 +52,7 @@
     <groupId>org.glassfish.jersey.core</groupId>
     <artifactId>jersey-common</artifactId>
     <packaging>jar</packaging>
-    <name>jersey-common</name>
+    <name>jersey-core-common</name>
 
     <description>Jersey core common packages</description>
 
