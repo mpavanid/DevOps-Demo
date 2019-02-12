@@ -52,7 +52,7 @@
 
     <artifactId>devops_sup</artifactId>
     <packaging>war</packaging>
-    <name>devops</name>
+    <name>devops_sup</name>
 
     <dependencies>
         <dependency>
