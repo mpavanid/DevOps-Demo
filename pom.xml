@@ -62,6 +62,7 @@
     <url>https://jersey.java.net/</url>
 
     <!-- prerequisites -->
+  <!-- Added by Santty to commit and trigger build -->
 
     <issueManagement>
         <system>JIRA</system>
