@@ -50,9 +50,9 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops_01</artifactId>
+    <artifactId>sandeep_devops</artifactId>
     <packaging>war</packaging>
-    <name>devops</name>
+    <name>sandeep_devops</name>
 
     <dependencies>
         <dependency>
