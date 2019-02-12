@@ -50,7 +50,7 @@
     </parent>
 
     <groupId>org.glassfish.jersey</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>Pankaj_Project</artifactId>
     <packaging>pom</packaging>
     <version>2.26-b02</version>
     <name>jersey</name>
