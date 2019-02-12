@@ -50,7 +50,7 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops_Karan</artifactId>
+    <artifactId>devops_Karan1</artifactId>
     <packaging>war</packaging>
     <name>devops</name>
 
