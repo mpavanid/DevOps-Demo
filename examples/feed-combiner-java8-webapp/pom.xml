@@ -50,9 +50,9 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops</artifactId>
+    <artifactId>nakkav</artifactId>
     <packaging>war</packaging>
-    <name>devops</name>
+    <name>nakkav</name>
 
     <dependencies>
         <dependency>
