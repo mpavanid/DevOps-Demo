@@ -50,9 +50,9 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops_balakrushnag</artifactId>
+    <artifactId>devops_balakrushnag_01</artifactId>
     <packaging>war</packaging>
-    <name>devops_balakrushnag</name>
+    <name>devops_balakrushnag_01</name>
 
     <dependencies>
         <dependency>
