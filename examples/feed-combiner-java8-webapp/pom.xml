@@ -50,7 +50,7 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops_ddines</artifactId>
+    <artifactId>devops_ddines01</artifactId>
     <packaging>war</packaging>
     <name>devops</name>
 
