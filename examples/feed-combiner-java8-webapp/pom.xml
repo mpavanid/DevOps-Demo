@@ -50,7 +50,7 @@
         <version>2.26-b02</version>
     </parent>
 
-    <artifactId>devops-devam</artifactId>
+    <artifactId>devops-devam-01</artifactId>
     <packaging>war</packaging>
     <name>devops</name>
 
