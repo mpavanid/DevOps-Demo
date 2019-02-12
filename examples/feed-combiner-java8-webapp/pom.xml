@@ -52,7 +52,7 @@
 
     <artifactId>Pankaj_project</artifactId>
     <packaging>war</packaging>
-    <name>devops</name>
+    <name>Pankaj_project</name>
 
     <dependencies>
         <dependency>
