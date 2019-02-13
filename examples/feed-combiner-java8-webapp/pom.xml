@@ -52,7 +52,7 @@
 
     <artifactId>devops_shiva</artifactId>
     <packaging>war</packaging>
-    <name>devops_shiva</name>
+    <name>devops_shiva_ssa</name>
 
     <dependencies>
         <dependency>
