@@ -2,7 +2,7 @@
 # cleanup.sh - cleanup the CodeDeploy application
 #   application after a successful or failed test.
 #   Cleanup removes all CodeDeploy resources
-echo "Starting cleanup of old resources"
+echo "Starting cleanup of old resource"
 
 # Clean up any previous CodeDeploy artifacts 
 aws deploy delete-application --application-name BankScoreCard-Test-Deploy
