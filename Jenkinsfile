@@ -49,6 +49,15 @@ pipeline {
                 
             }
         }
+        
+        stage ('Parallel jobs execution') {
+            parallel firstBranch: {
+                build 'SANDEEP_LAB/sandeep_pipeline_1'
+        }, secondBranch: {
+            build 'SANDEEP_LAB/sandeep_pipeline_2'
+    },
+    failFast: true
+        
         }
               
 }
