@@ -10,12 +10,12 @@ pipeline {
                   parallel ( 
                       'Job1': 
             {
-                build: 'Echojob1'
+                build 'Shiva_Demo/Echojob1'
                 
             },
                       'Job2' :
                       {                  
-                         build: 'Echojob2'
+                         build 'Shiva_Demo/Echojob1'
                      }
                      )
             } 
