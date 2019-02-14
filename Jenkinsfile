@@ -49,7 +49,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline_Dinesh/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline_Dinesh/examples/feed-combiner-java8-webapp/target/devops_ddines04.war /home/jarfile'
                 
             }
         }
