@@ -18,11 +18,8 @@ stage('checkout') {
     checkout([$class: 'GitSCM', branches: [[name: '*/BR_Manoj']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'bbcb3036a7c3b14ae76454d2ebf7ae174e06c0dc', url: 'https://github.com/devops81/DevOps-Demo.git']]])
   }
 }
-stage('Build the project') {
-  steps {
-    // One or more steps need to be included within the steps block.
-  }
-}  stage ('Build the project') {
+
+  stage ('Build the project') {
             steps {
                 dir("/var/lib/jenkins/workspace/PipelineProject/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
