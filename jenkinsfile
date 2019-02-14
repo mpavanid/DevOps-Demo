@@ -19,7 +19,7 @@ pipeline {
         stage ('Build the project') {
             steps {
                 dir("/var/lib/jenkins/workspace/Shiva_Demo/Pipeline_jobexamples/feed-combiner-java8-webapp") {
-             sh 'clean -Dmaven.test.skip=true install'
+             sh 'maven clean -Dmaven.test.skip=true install'
                 }
                 
             }
