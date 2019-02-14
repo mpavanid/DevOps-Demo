@@ -31,21 +31,7 @@ pipeline {
                 
             }
         }
-          stage ('Generate JUNIT REPORT') {
-             steps {
-                  parallel ( 
-                      'Archeiving the reports': 
-            {
-                junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
-                
-            },
-                      'Sending out the JUNIT report' :
-                      {                  
-                         emailext body: 'Junits reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'
-                     }
-                     )
-            } 
-        }
+          
         stage ('Deploy the application') {
             steps {
                
