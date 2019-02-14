@@ -15,7 +15,7 @@ pipeline {
             },
                       'Job2' :
                       {                  
-                         build 'Shiva_Demo/Echojob1'
+                         build 'Shiva_Demo/Echojob2'
                      }
                      )
             } 
