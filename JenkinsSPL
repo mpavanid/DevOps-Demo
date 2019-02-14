@@ -40,7 +40,7 @@ emailext body: '${SCRIPT, template="francois.email.groovy.template"}', recipient
 stage ('Deploy to QA')
 {
 
-#sh 'sudo rm -rf /home/user/warfile/devops.war'
+
 sh 'sudo cp  -rf  /var/lib/jenkins/workspace/BR_Balakrushnag/SonarQube_test/examples/feed-combiner-java8-webapp/target/devops.war /home/user/warfile/'
 
 }
