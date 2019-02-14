@@ -1,7 +1,7 @@
 node('master') {
 
 stage ('SCM Checkout') {
-	checkout([$class: 'GitSCM', branches: [[name: '*/BR_Balakrushnag']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devops81/DevOps-Demo.git']]])
+	checkout([$class: 'GitSCM', branches: [[name: '*/DPLExample']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devops81/DevOps-Demo.git']]])
 
 }
 
@@ -41,7 +41,7 @@ stage ('Deploy to QA')
 {
 
 
-sh 'sudo cp  -rf  /var/lib/jenkins/workspace/ScriptedPipeline/examples/feed-combiner-java8-webapp/target/devops_balakrushnag_01.war /home/user/warfile/'
+sh 'sudo cp  -rf  /var/lib/jenkins/workspace/ScriptedPipeline/examples/feed-combiner-java8-webapp/target/devops.war /home/user/warfile/'
 
 }
 
