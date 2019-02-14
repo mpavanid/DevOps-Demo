@@ -49,7 +49,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/BR_SravanC_Pipeline_Project/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/BR_SravanC_Pipeline_Project/examples/feed-combiner-java8-webapp/target/devops_SravanC.war /home/jarfile'
                 
             }
         }
