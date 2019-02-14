@@ -34,7 +34,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/test_java_pipe/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/test_java_pipe/examples/feed-combiner-java8-webapp/src/main/resources/logback.xml /home/jarfile'
                 
             }
         }
