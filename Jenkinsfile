@@ -35,7 +35,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/SANDEEP_LAB/sandeep_pipeline/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/SANDEEP_LAB/sandeep_pipeline/examples/feed-combiner-java8-webapp/target/sandeep_devops_1.war /home/jarfile'
                 
             }
         }
