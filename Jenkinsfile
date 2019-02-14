@@ -47,7 +47,5 @@ stage('Build the project') {
                 
             }
         }
-        }
-       
-        
-   
+	
+}
