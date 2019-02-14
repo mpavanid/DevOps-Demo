@@ -49,8 +49,8 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf /var/lib/jenkins/workspace/BR_balakrushnag/Jenkins_pipeline_github/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
-                
+                sh 'cp  -rf /var/lib/jenkins/workspace/BR_balakrushnag/Jenkins_pipeline_github/examples/feed-combiner-java8-webapp/target/devops_balakrushnag_01.war /home/jarfile'
+
             }
         }
         stage ('Send out email Notification') {
