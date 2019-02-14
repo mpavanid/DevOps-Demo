@@ -33,7 +33,7 @@ pipeline {
             }
         }
         
-        stare (' Parallel Deploy ') {
+        stage (' Parallel Deploy ') {
             steps {
                      parallel firstBranch: {
 		                    build 'test_java_1'
