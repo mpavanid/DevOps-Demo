@@ -14,10 +14,7 @@ dir('/var/lib/jenkins/workspace/ScriptedPipeline/examples/feed-combiner-java8-we
 { 
 sh "${mvnHome}/bin/mvn clean install"}
 }
-stage ('Generate JUNIT REPORT') 
-	        {
-                junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml' 
-            	}
+
  stage('SonarQub Analysis') {
 
 def mvnHome = tool name: 'Maven3', type: 'maven'
