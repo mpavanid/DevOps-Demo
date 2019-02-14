@@ -10,12 +10,12 @@ pipeline {
                   parallel ( 
                       'Job1': 
             {
-                build 'Pankaj_Pipeline/Pipeline_call1'
+                build 'Pipeline_call1'
                 
             },
                       'Job2' :
                       {                  
-                         build 'Pankaj_Pipeline/Pipeline_call2'
+                         build 'Pipeline_call2'
                      }
                      )
             } 
