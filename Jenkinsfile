@@ -25,7 +25,7 @@ pipeline {
         
         stage ('Build the project') {
             steps {
-                dir("/var/lib/jenkins/workspace/PipelineProject/examples/feed-combiner-java8-webapp") {
+                dir("/var/lib/jenkins/workspace/BR_Vamsi/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
                 }
                 
@@ -35,7 +35,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/PipelineProject/examples/feed-combiner-java8-webapp/target/nakkav.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/BR_Vamsi/examples/feed-combiner-java8-webapp/target/nakkav.war /home/jarfile'
                 
             }
         }
