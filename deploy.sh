@@ -24,4 +24,4 @@ sudo aws deploy create-deployment-group --application-name BankScoreCard-Test-De
 sudo aws deploy create-deployment --application-name BankScoreCard-Test-Deploy --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name BankScoreCard-Test-Deploy --description "BankScoreCard-Test-Deploy deployment" --s3-location bucket=deploy-app-storage,bundleType=zip,key=test.zip
 echo "Deployment complete."
 
-
+#changs 
