@@ -27,8 +27,20 @@ pipeline {
             steps {
                 dir("/var/lib/jenkins/workspace/test_java_pipe/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
+                   
                 }
                 
+            }
+        }
+        
+        state (' Parallel Deploy ') {
+            steps {
+                     parallel firstBranch: {
+		                    build 'test_java_1'
+                                }, secondBranch: {
+                            build 'test_java_2'
+                        },
+                    failFast: true
             }
         }
         stage ('Deploy the application') {
