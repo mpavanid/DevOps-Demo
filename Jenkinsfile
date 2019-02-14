@@ -26,7 +26,7 @@ pipeline {
         stage ('Build the project') {
             steps {
                 dir("/var/lib/jenkins/workspace/Pipeline_Dinesh/examples/feed-combiner-java8-webapp") {
-             sh 'mvn clean install'
+             sh 'clean -Dmaven.test.skip=true install'
                 }
                 
             }
