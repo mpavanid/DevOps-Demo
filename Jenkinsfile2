@@ -1,0 +1,27 @@
+pipeline {
+    agent {
+        label "master"
+    }
+   
+    stages {
+       
+          stage ('Pipeline Job') {
+             steps {
+                  parallel ( 
+                      'Job1': 
+            {
+                build 'Pankaj_Pipeline/Pipeline_call1'
+                
+            },
+                      'Job2' :
+                      {                  
+                         build 'Pankaj_Pipeline/Pipeline_call2'
+                     }
+                     )
+            } 
+        }
+        
+        }
+       
+        
+}
