@@ -1,0 +1,62 @@
+pipeline {
+    agent {
+        label "master"
+    }
+    tools {
+        maven 'Maven3'
+
+    }
+    stages {
+        
+
+        stage ('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/BR_SHIVA']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Shiva_git1', url: 'https://github.com/devops81/DevOps-Demo.git']]])
+                
+            }
+        }
+        
+        stage ('Build the project') {
+            steps {
+                dir("/var/lib/jenkins/workspace/Pipeline_job/examples/feed-combiner-java8-webapp") {
+             sh 'clean -Dmaven.test.skip=true install'
+                }
+                
+            }
+        }
+          stage ('Generate JUNIT REPORT') {
+             steps {
+                  parallel ( 
+                      'Archeiving the reports': 
+            {
+                junit 'examples/feed-combiner-java8-webapp/target/surefire-reports/*.xml'
+                
+            },
+                      'Sending out the JUNIT report' :
+                      {                  
+                         emailext body: 'Junits reporting getting archived', subject: 'junit update', to: 'devops81@gmail.com'
+                     }
+                     )
+            } 
+        }
+        stage ('Deploy the application') {
+            steps {
+               
+                sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline_job/examples/feed-combiner-java8-webapp/target/devops_shiva_ssa.war /home/jarfile'
+                
+            }
+        }
+        stage ('Send out email Notification') {
+            agent {
+                label "master"
+            }
+            steps {
+                emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'devops81@gmail.com'
+
+                
+            }
+        }
+        }
+       
+        
+}
