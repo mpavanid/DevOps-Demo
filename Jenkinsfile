@@ -7,7 +7,8 @@ pipeline {
 
     }
     stages {
-        stage ('Initialize') {
+        parallel{
+            stage ('Initialize') {
             steps {
                 sh '''
                     echo "PATH = $PATH"
@@ -50,7 +51,7 @@ pipeline {
             }
         }
         }
-       
+    }
         
         
     }              
