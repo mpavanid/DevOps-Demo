@@ -25,7 +25,7 @@ pipeline {
         
         stage ('Build the project') {
             steps {
-                dir("/var/lib/jenkins/workspace/sandeep_pipeline/examples/feed-combiner-java8-webapp") {
+                dir("/var/lib/jenkins/workspace/SANDEEP_LAB/sandeep_pipeline/examples/feed-combiner-java8-webapp") {
              sh 'mvn clean install'
                 }
                 
@@ -35,7 +35,7 @@ pipeline {
         stage ('Deploy the application') {
             steps {
                
-                sh 'cp  -rf  /var/lib/jenkins/workspace/sandeep_pipeline/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                sh 'cp  -rf  /var/lib/jenkins/workspace/SANDEEP_LAB/sandeep_pipeline/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
                 
             }
         }
