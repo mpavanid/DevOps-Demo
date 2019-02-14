@@ -9,7 +9,7 @@ stage ('Compile-Package')
 
 {
 def mvnHome = tool name: 'Maven3', type: 'maven'
-dir('/var/lib/jenkins/workspace/BR_Balakrushnag/SonarQube_test/examples/feed-combiner-java8-webapp')
+dir('/var/lib/jenkins/workspace/BR_Balakrushnag/war_build/examples/feed-combiner-java8-webapp')
 { 
 sh "${mvnHome}/bin/mvn clean install"}
 }
@@ -22,7 +22,7 @@ stage ('Generate JUNIT REPORT')
 def mvnHome = tool name: 'Maven3', type: 'maven'
 
 withSonarQubeEnv('SONRQUBE-INST') {
-dir('/var/lib/jenkins/workspace/BR_Balakrushnag/SonarQube_test/examples/feed-combiner-java8-webapp')
+dir('/var/lib/jenkins/workspace/BR_Balakrushnag/war_build/examples/feed-combiner-java8-webapp')
 {
 sh "${mvnHome}/bin/mvn sonar:sonar"
 }
@@ -41,7 +41,7 @@ stage ('Deploy to QA')
 {
 
 
-sh 'sudo cp  -rf  /var/lib/jenkins/workspace/BR_Balakrushnag/SonarQube_test/examples/feed-combiner-java8-webapp/target/devops_balakrushnag_01.war /home/user/warfile/'
+sh 'sudo cp  -rf  /var/lib/jenkins/workspace/BR_Balakrushnag/war_build/examples/feed-combiner-java8-webapp/target/devops_balakrushnag_01.war /home/user/warfile/'
 
 }
 
